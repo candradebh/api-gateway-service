@@ -28,7 +28,7 @@ public class AuthorizationFilter extends BasicAuthenticationFilter {
 
         String authorizationHeader = request.getHeader(environment.getProperty("authorization.token.header.name"));
 
-        if (authorizationHeader == null || !authorizationHeader.startsWith("authorization.token.header.name")) {
+        if (authorizationHeader == null || !authorizationHeader.startsWith(environment.getProperty("authorization.token.header.prefix"))) {
             chain.doFilter(request, response);
             return;
         }

@@ -28,10 +28,10 @@ zuul:
 api:
   registration:
     url:
-      path: /user
+      path: /auth/user
   login:
     url:
-      path: /auth/login
+      path: /auth/auth/login
 
 authorization:
   token:
